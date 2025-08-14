@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offline-Ready User Data Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Offline-Ready User Data Viewer</h1>
+
+<div class="top-controls">
+  <button id="darkModeToggle">🌙 Dark Mode</button>
+  <button id="clearCache">🗑 Clear Cache</button>
+</div>
+
+<div class="controls">
+  <input type="text" id="searchInput" placeholder="Search by name...">
+  <select id="sortSelect">
+    <option value="">Sort by</option>
+    <option value="az">Name A–Z</option>
+    <option value="za">Name Z–A</option>
+  </select>
+</div>
+
+<p id="userCount"></p>
+<div id="error-message"></div>
+<div id="user-container"></div>
+<div id="loader" class="loader" style="display:none;"></div>
+<button class="reload-btn" onclick="fetchUsers(true)">Reload Data</button>
+
+<script src="script.js"></script>
+</body>
+</html>
